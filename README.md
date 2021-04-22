@@ -1,12 +1,8 @@
-# RTAutoSprintExtended Custom Survivor/Skill Addon | Game ver. 1.1.1.4
+# RTAutoSprintExtended Custom Skill Addon | Game ver. 1.1.1.4
 
 ---
 
-## Contact
-
-Open an issue [at the Github repo](https://github.com/JohnEdwa/RTAutoSprintExtended) or find me on the RoR2 modding discord (JohnEdwa#7903).
-
-## Changelog
+### Latest Patch.
 
 `1.0.0`  [2021-04-xx]
 
@@ -14,19 +10,21 @@ Open an issue [at the Github repo](https://github.com/JohnEdwa/RTAutoSprintExten
 
 # Description
 
-Additional patch for RTAutoSprintExtended that add patches for a few custom characters and skill packs, as well as a way to set them up as a configuration file entry.
+Additional module for [RTAutoSprintExtended](https://thunderstore.io/package/JohnEdwa/RTAutoSprintEx/) that adds patches for a few custom characters and skill packs, as well as a way to set them up as a configuration file entry.
 
 ### Mod compatibility and "API":
 
 Included patches:
 
-* Artificer Extended: Animation delay for ``IceShard``, ``LaserBolt`` and ``SnowBall``.
+* Artificer Extended: Animation delay for ``IceShard``, ``LaserBolt`` and ``SnowBall``. Sprint disable for ``CastThunder``.
 * MandoGaming: Animation delay for ``HeavyPistol2`` and ``BeamPistol``.
 * EggsSkills: Animation delay for ``CombatShotgunEntity``, ``TeslaMineFireState``. Sprint disable for ``DirectiveRoot``.
 * Playble Templar: Sprint disable for ``TemplarRifleFire``.
 * The House: Sprint disable for ``Roulette``.
 
-**This is for RTAutoSprintEx, i.e what this addon is doing.**
+---
+
+**The rest is for RTAutoSprintEx, i.e what this addon is doing.**
 
 You can use SendMessage to register an EntityState to the list of Sprint Disablers and Animation Delayers. 
 Add a soft dependency to ensure RTAutoSprintEx is loaded before your mod.
@@ -42,3 +40,11 @@ if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.johnedwa.RTAutoSp
 
 `RT_SprintDisableMessage`  blocks AutoSprinting from activating when the player is in that EntityState.
 `RT_AnimationDelayMessage` looks for a field called `duration` to use as a delay - useful for keeping wind-down animations from being immediately cancelled. 
+
+## Changelog
+
+Full changelog can be found in [CHANGELOG.MD](https://github.com/JohnEdwa/RTAutoSprintAddon/blob/master/CHANGELOG.md).
+
+## Contact
+
+Open an issue [at the Github repo](https://github.com/JohnEdwa/RTAutoSprintAddon) or find me on the RoR2 modding discord (JohnEdwa#7903).
