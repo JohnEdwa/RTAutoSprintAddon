@@ -16,35 +16,35 @@ namespace RTAutoSprintEx {
     public class RTAutoSprintAddon : BaseUnityPlugin {
         public void Awake() {
 
-            ConfigFile conf = new ConfigFile(Paths.ConfigPath + "\\RTAutoSprintAddon.cfg", true);
-            ConfigEntry<bool> EnableDebugLogConf = conf.Bind<bool>(
+            //ConfigFile Config = new ConfigFile(Paths.ConfigPath + "\\RTAutoSprintAddon.cfg", true);
+            ConfigEntry<bool> EnableDebugLogConf = Config.Bind<bool>(
                 "1) Options", "EnableDebugLog", true, 
                 new ConfigDescription("Print debug logs to the console.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<bool> ArtificerExtendedConf = conf.Bind<bool>(
+            ConfigEntry<bool> ArtificerExtendedConf = Config.Bind<bool>(
                 "2) Included Patches", "ArtificerExtended", true, 
                 new ConfigDescription("Enables the Artificer Extended compatibility patch.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<bool> MandoGamingConf = conf.Bind<bool>(
+            ConfigEntry<bool> MandoGamingConf = Config.Bind<bool>(
                 "2) Included Patches", "MandoGaming", true, 
                 new ConfigDescription("Enables the Mando Gaming compatibility patch.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<bool> EggsSkillsConf = conf.Bind<bool>(
+            ConfigEntry<bool> EggsSkillsConf = Config.Bind<bool>(
                 "2) Included Patches", "EggsSkills", true, 
                 new ConfigDescription("Enables the EggsSkills compatibility patch.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<bool> PlayableTemplarConf = conf.Bind<bool>(
+            ConfigEntry<bool> PlayableTemplarConf = Config.Bind<bool>(
                 "2) Included Patches", "PlayableTemplar", true, 
                 new ConfigDescription("Enables the Playable Templar compatibility patch.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<bool> TheHouseConf = conf.Bind<bool>(
+            ConfigEntry<bool> TheHouseConf = Config.Bind<bool>(
                 "2) Included Patches", "TheHouse", true, 
                 new ConfigDescription("Enables The House compatibility patch.",
                 new AcceptableValueList<bool>(true, false)));
-            ConfigEntry<string> DisablerConf = conf.Bind<string>(
+            ConfigEntry<string> DisablerConf = Config.Bind<string>(
                 "3) Manual Patching", "SprintDisableEntityStates", "", 
                 new ConfigDescription("List of EntityStates that disable sprinting."));
-            ConfigEntry<string> DelayerConf = conf.Bind<string>(
+            ConfigEntry<string> DelayerConf = Config.Bind<string>(
                 "3) Manual Patching", "AnimationDelayEntityStates", "", 
                 new ConfigDescription("List of EntityStates that check for `duration` field for a delay."));
 

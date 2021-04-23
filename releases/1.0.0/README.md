@@ -16,7 +16,7 @@ Additional module for [RTAutoSprintExtended](https://thunderstore.io/package/Joh
 
 Included patches:
 
-* Artificer Extended: Animation delay for ``IceShard``, ``LaserBolt`` and ``SnowBall``.
+* Artificer Extended: Animation delay for ``IceShard``, ``LaserBolt`` and ``SnowBall``. Sprint disable for ``CastThunder``.
 * MandoGaming: Animation delay for ``HeavyPistol2`` and ``BeamPistol``.
 * EggsSkills: Animation delay for ``CombatShotgunEntity``, ``TeslaMineFireState``. Sprint disable for ``DirectiveRoot``.
 * Playble Templar: Sprint disable for ``TemplarRifleFire``.
@@ -27,7 +27,7 @@ Included patches:
 **The rest is for RTAutoSprintEx, i.e what this addon is doing.**
 
 You can use SendMessage to register an EntityState to the list of Sprint Disablers and Animation Delayers. 
-Add a soft dependency to ensure RTAutoSprintEx is loaded before your mod.
+Add a soft dependency to ensure RTAutoSprintEx (**not RTAutoSprintAddon!**) is loaded before your mod.
 
 ```
 [BepInDependency("com.johnedwa.RTAutoSprintEx", BepInDependency.DependencyFlags.SoftDependency)]
@@ -42,6 +42,10 @@ if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.johnedwa.RTAutoSp
 `RT_AnimationDelayMessage` looks for a field called `duration` to use as a delay - useful for keeping wind-down animations from being immediately cancelled. 
 
 ## Changelog
+
+`1.0.0`  [2021-04-xx]
+
+* First Release.
 
 Full changelog can be found in [CHANGELOG.MD](https://github.com/JohnEdwa/RTAutoSprintAddon/blob/master/CHANGELOG.md).
 
