@@ -22,6 +22,14 @@ Included patches:
 * Playble Templar: Sprint disable for ``TemplarRifleFire``.
 * The House: Sprint disable for ``Roulette``.
 
+## Configuration
+
+* ``EnableDebugLog``: If the addons spits out what it's doing in the console or not.
+* ``SprintDisableEntityStates``: List of EntityStates that disable sprinting. separated by `,`.
+* ``AnimationDelayEntityStates``: List of EntityStates that check for `duration` field for a delay, separated by `,`.
+
+And individual on/off toggles for the included patches/addons.
+
 ---
 
 **The rest is for RTAutoSprintEx, i.e what this addon is doing.**

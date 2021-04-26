@@ -1,4 +1,4 @@
-# RTAutoSprintExtended Custom Skill Addon | Game ver. 1.1.1.4
+# RT AutoSprint Addon | Game ver. 1.1.1.4
 
 ---
 
@@ -27,7 +27,7 @@ Included patches:
 **The rest is for RTAutoSprintEx, i.e what this addon is doing.**
 
 You can use SendMessage to register an EntityState to the list of Sprint Disablers and Animation Delayers. 
-Add a soft dependency to ensure RTAutoSprintEx (**not RTAutoSprintAddon!**) is loaded before your mod.
+Add a soft dependency to ensure RTAutoSprintEx (not RTAutoSprintAddon) is loaded before your mod.
 
 ```
 [BepInDependency("com.johnedwa.RTAutoSprintEx", BepInDependency.DependencyFlags.SoftDependency)]

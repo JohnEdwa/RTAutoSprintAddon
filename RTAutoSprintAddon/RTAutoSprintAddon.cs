@@ -58,51 +58,51 @@ namespace RTAutoSprintEx {
                 if (entityStateDisableList.Count() > 0) {
                     foreach (var state in entityStateDisableList)  {
                         if (EnableDebugLogConf.Value) Logger.LogInfo("Adding Custom EntityState Disabler for " + state);
-                        SendMessage("RT_RegisterSprintDisable", state);
+                        SendMessage("RT_SprintDisableMessage", state);
 
                     }
                 }
                 if (entityStateDelayList.Count() > 0) {
                     foreach (var state in entityStateDelayList)  {
                         if (EnableDebugLogConf.Value) Logger.LogInfo("Adding Custom EntityState Delayer for " + state);
-                        SendMessage("RT_RegisterAnimationDelay", state);
+                        SendMessage("RT_AnimationDelayMessage", state);
                     }
                 }
 
                 // Artificer Extended
                 if (ArtificerExtendedConf.Value && BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Borbo.ArtificerExtended")) {
                     if (EnableDebugLogConf.Value) Logger.LogInfo("...Artificer Extended.");
-                    SendMessage("RT_RegisterAnimationDelay", "AltArtificerExtended.EntityStates.FireIceShard");
-                    SendMessage("RT_RegisterAnimationDelay", "AltArtificerExtended.EntityStates.FireLaserbolts");
-                    SendMessage("RT_RegisterAnimationDelay", "AltArtificerExtended.EntityStates.FireSnowBall");
-                    SendMessage("RT_RegisterSprintDisable", "AltArtificerExtended.EntityStates.CastThunder");
+                    SendMessage("RT_AnimationDelayMessage", "AltArtificerExtended.EntityStates.FireIceShard");
+                    SendMessage("RT_AnimationDelayMessage", "AltArtificerExtended.EntityStates.FireLaserbolts");
+                    SendMessage("RT_AnimationDelayMessage", "AltArtificerExtended.EntityStates.FireSnowBall");
+                    SendMessage("RT_SprintDisableMessage", "AltArtificerExtended.EntityStates.CastThunder");
                 }
 
                 // MandoGaming
                 if (MandoGamingConf.Value && BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.FMRadio11.MandoGaming")) {
                     if (EnableDebugLogConf.Value) Logger.LogInfo("...MandoGaming.");
-                    SendMessage("RT_RegisterAnimationDelay", "FMCommando.Skills.HeavyPistol2");
-                    SendMessage("RT_RegisterAnimationDelay", "FMCommando.Skills.BeamPistol");
+                    SendMessage("RT_AnimationDelayMessage", "FMCommando.Skills.HeavyPistol2");
+                    SendMessage("RT_AnimationDelayMessage", "FMCommando.Skills.BeamPistol");
                 }
 
                 //EggsSkills
                 if (EggsSkillsConf.Value && BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Egg.EggsSkills")) {
                     if (EnableDebugLogConf.Value) Logger.LogInfo("...EggsSkills.");
-                    SendMessage("RT_RegisterSprintDisable", "EggsSkills.EntityStates.DirectiveRoot");
-                    SendMessage("RT_RegisterAnimationDelay", "EggsSkills.EntityStates.CombatShotgunEntity");
-                    SendMessage("RT_RegisterAnimationDelay", "EggsSkills.EntityStates.TeslaMineFireState");
+                    SendMessage("RT_SprintDisableMessage", "EggsSkills.EntityStates.DirectiveRoot");
+                    SendMessage("RT_AnimationDelayMessage", "EggsSkills.EntityStates.CombatShotgunEntity");
+                    SendMessage("RT_AnimationDelayMessage", "EggsSkills.EntityStates.TeslaMineFireState");
                 }
 
                 //Playble Templar
                 if (PlayableTemplarConf.Value && BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Tymmey.Templar")) {
                     if (EnableDebugLogConf.Value) Logger.LogInfo("...Playable Templar");
-                    SendMessage("RT_RegisterSprintDisable", "Templar.TemplarRifleFire");
+                    SendMessage("RT_SprintDisableMessage", "Templar.TemplarRifleFire");
                 }
 
                 //The House
                 if (ArtificerExtendedConf.Value && BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.JavAngle.HouseMod")) {
                     if (EnableDebugLogConf.Value) Logger.LogInfo("...The House.");
-                    SendMessage("RT_RegisterAnimationDelay", "HouseMod2.SkillStates.Roulette");
+                    SendMessage("RT_AnimationDelayMessage", "HouseMod2.SkillStates.Roulette");
                 }
                 if (EnableDebugLogConf.Value) Logger.LogInfo("Patching completed.");
             }
