@@ -11,7 +11,7 @@ namespace RTAutoSprintEx {
     [BepInDependency("com.Egg.EggsSkills", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.Tymmey.Templar", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.JavAngle.HouseMod", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInPlugin("com.johnedwa.RTAutoSprintAddon", "RTAutoSprintAddon", "1.0.0")]
+    [BepInPlugin("com.johnedwa.RTAutoSprintAddon", "RTAutoSprintAddon", "1.0.1")]
 
     public class RTAutoSprintAddon : BaseUnityPlugin {
         public void Awake() {
